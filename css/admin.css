@@ -5,7 +5,118 @@
 
 body {
     font-size: 13px;
-    background: #3C3F41;
+    background: #1f2124;;
+}
+
+.blue-text {
+    color: #39ADB4;
+}
+
+.white-text {
+    color: white;
+}
+
+.green-bg {
+    background-color: #39ADB4;
+}
+
+.yellow-bg {
+    background-color: #D8D138;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.white-bg .fa-times {
+    background-color: #d7d7d7;
+}
+
+.white-bg .fa-times:hover {
+    background: #83ccd1;
+}
+
+.orange-bg {
+    background-color: #F17A54;
+    color: white;
+}
+
+.orange-bg .fa-times {
+    background-color: #F0A790;
+}
+
+.orange-bg .fa-times:hover {
+    background-color: #E14311;
+}
+
+.pink-bg {
+    background-color: #D7425C;
+    color: white;
+}
+
+.pink-bg .fa-times {
+    background-color: #E57C8F;
+}
+
+.pink-bg .fa-times:hover {
+    background-color: #BD1F3B;
+}
+
+.blue-bg {
+    background-color: #3275BB;
+    color: white;
+}
+
+.blue-bg .fa-times {
+    background-color: #6792C0;
+}
+
+.blue-bg .fa-times:hover {
+    background-color: #2C639C;
+}
+
+.light-gray-bg {
+    background-color: #efefef;
+}
+
+.padding-right-25 {
+    padding-right: 25px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom-70 {
+    margin-bottom: 70px;
+}
+
+.margin-right-15 {
+    margin-right: 15px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.no-border {
+    border: none;
 }
 
 #wrapper {
@@ -18,31 +129,42 @@ body {
     background-color: #fff;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 250px;
+        margin: 0 0 0 300px;
         padding: 0 30px;
         border-left: 1px solid #e7e7e7;
     }
+}
+
+#wrapper .navbar-static-top {
+    border-bottom: 2px solid white;
+    min-height: 74px;
+}
+
+#wrapper .navbar-brand {
+    height: 74px;
+    padding: 25px;
+    color: #13895F;
+}
+
+.form-control:focus {
+    border-color: #13895F;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(19, 137, 95, .075), 0 0 8px rgba(19, 137, 95, .6);
 }
 
 .navbar-top-links {
     margin-right: 0;
 }
 
-.navbar-top-links .custom-search-form{
-    margin-top: 10px;
-    width: 220px;
-}
-
-
 .navbar-top-links li {
     display: inline-block;
 }
 
 .navbar-top-links li:last-child {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .navbar-top-links li a {
@@ -91,22 +213,69 @@ body {
     left: auto;
 }
 
+/* Search form */
+.custom-search-form {
+    width: 240px;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
 
+.custom-search-form .input-group {
+    width: 100%;
+}
+
+.custom-search-form .input-group .form-control {
+    background-color: #18191b;
+    border: none;
+    border-radius: 10px;
+    color: #DDD;
+    padding-left: 30px;
+}
+
+.custom-search-form .input-group {
+    position: relative;
+}
+
+.fa-search {
+    height: 32px;
+    width: 32px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
 .sidebar .sidebar-nav.navbar-collapse {
     padding-right: 0;
     padding-left: 0;
 }
-
-.sidebar .sidebar-search {
-    padding: 15px;
+.navbar-collapse{
+    max-height: 100%;
+}
+.sidebar li {
+    font-weight: 300;
 }
 
-.sidebar ul li {
-    border-bottom: 1px solid #e7e7e7;
+.sidebar ul li a {
+    color: #e9e9ea;
+    display: block;
+    padding: 30px;
+    transition: all 0.3s ease;
 }
 
-.sidebar ul li a.active {
-    background-color: #eee;
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #18191b;
+    border-left: 8px solid #13895F;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #18191b;
+    border-left: 8px solid #13895F;
 }
 
 .sidebar .arrow {
@@ -117,13 +286,18 @@ body {
     content: "\f104";
 }
 
-.sidebar .active>a>.fa.arrow:before {
+.sidebar .active > a > .fa.arrow:before {
     content: "\f107";
+}
+
+.sidebar .fa {
+    margin-right: 15px;
 }
 
 .sidebar .nav-second-level li,
 .sidebar .nav-third-level li {
-    border-bottom: 0!important;
+    border-bottom: 0 !important;
+    background-color: rgba(44, 77, 78, 0.35);
 }
 
 .sidebar .nav-second-level li a {
@@ -134,12 +308,12 @@ body {
     padding-left: 52px;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .sidebar {
         z-index: 1;
         position: absolute;
-        width: 250px;
-        margin-top: 51px;
+        width: 300px;
+        margin-top: 75px;
     }
 
     .navbar-top-links .dropdown-messages,
