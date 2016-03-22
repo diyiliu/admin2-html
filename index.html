@@ -76,7 +76,8 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
+                                class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="#">Second Level Item</a>
@@ -130,5 +131,20 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/metisMenu.min.js"></script>
 <script src="./js/sb-admin-2.js"></script>
+
+<script>
+    $(function () {
+        $("#side-menu li a").click(function () {
+            setTimeout(reSet, 300);
+        });
+
+        function reSet() {
+           var height = $("#side-menu").height();
+            $("#page-wrapper").css("min-height", height + "px");
+
+            console.log(height);
+        }
+    })
+</script>
 </body>
 </html>
